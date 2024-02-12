@@ -38,25 +38,50 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
 
             children: [
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text('1. Change Color',style: TextStyle(fontSize: 18),),
+              GestureDetector(
+                onTap: () {
+
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text('1. Change Color',style: TextStyle(fontSize: 18),),
+                ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text('2. Privacy Policy',style: TextStyle(fontSize: 18)),
+              GestureDetector(
+                onTap: () {
+
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text('2. Privacy Policy',style: TextStyle(fontSize: 18)),
+                ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text('3. More Apps',style: TextStyle(fontSize: 18)),
+              GestureDetector(
+                onTap: () {
+
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text('3. More Apps',style: TextStyle(fontSize: 18)),
+                ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text('4. Rate Us',style: TextStyle(fontSize: 18)),
+              GestureDetector(
+                onTap: () {
+
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text('4. Rate Us',style: TextStyle(fontSize: 18)),
+                ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text('5. Share',style: TextStyle(fontSize: 18)),
+              GestureDetector(
+                onTap: () {
+
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text('5. Share',style: TextStyle(fontSize: 18)),
+                ),
               ),
             ],
           ),),
