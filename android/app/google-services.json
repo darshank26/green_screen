@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "929836690095",
+    "project_id": "green-screen-adb17",
+    "storage_bucket": "green-screen-adb17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929836690095:android:adf3124f79fcd73def425a",
+        "android_client_info": {
+          "package_name": "com.darshankomu.green_screen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAINddwEiG7JVmlr1zOLaykXjH-zISGX5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
