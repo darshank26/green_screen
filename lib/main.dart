@@ -146,7 +146,7 @@ class _MyAppState extends State<MyApp> {
 
     // NOTE: Replace with your own app ID from https://www.onesignal.com
     await OneSignal.shared
-        .setAppId("7216adc7-6e29-4245-9cc3-5a52f62f439c");
+        .setAppId("c3fe9e4f-3df0-4a17-bf0e-b9a8d37c8635");
 
     // OneSignal.shared
     //     .setInFocusDisplayType(OSNotificationDisplayType.notification);
