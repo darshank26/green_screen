@@ -6,58 +6,57 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-import 'AdHelper/adshelper.dart';
 import 'Screens/homescreens.dart';
 
 
-AppOpenAd? openAd;
+// AppOpenAd? openAd;
 
 Future<void> loadAd() async {
-  await AppOpenAd.load(adUnitId: AdHelper.appOpenAd, request: const AdRequest(),
-      adLoadCallback: AppOpenAdLoadCallback(
-          onAdLoaded: (ad){
-            openAd = ad;
-            openAd!.show();
-          },
-          onAdFailedToLoad: (error){
-            print('open ad load failed $error');
-          }),
-      orientation: AppOpenAd.orientationPortrait);
+
+  // await AppOpenAd.load(adUnitId: AdHelper.appOpenAd, request: const AdRequest(),
+  //     adLoadCallback: AppOpenAdLoadCallback(
+  //         onAdLoaded: (ad){
+  //           openAd = ad;
+  //           openAd!.show();
+  //         },
+  //         onAdFailedToLoad: (error){
+  //           print('open ad load failed $error');
+  //         }),
+  //     orientation: AppOpenAd.orientationPortrait);
 }
 
 
-void showAd()
-{
-  if(openAd == null)
-  {
-    print('trying to show before loading');
-    loadAd();
-    return;
-  }
-  openAd!.fullScreenContentCallback = FullScreenContentCallback(
-      onAdShowedFullScreenContent: (ad) {
-        print('onAdShowedFullScreenContent');
-      },
-      onAdFailedToShowFullScreenContent: (ad,error)
-      {
-        ad.dispose();
-        print('failed to load $error');
-        openAd = null;
-        loadAd();
-      },
-      onAdDismissedFullScreenContent: (ad)
-      {
-        ad.dispose();
-        print('onAdWillDismissFullScreenContent');
-        openAd = null;
-        loadAd();
-      }
-  );
-  openAd!.show();
-}
+// void showAd()
+// {
+//   if(openAd == null)
+//   {
+//     print('trying to show before loading');
+//     loadAd();
+//     return;
+//   }
+//   openAd!.fullScreenContentCallback = FullScreenContentCallback(
+//       onAdShowedFullScreenContent: (ad) {
+//         print('onAdShowedFullScreenContent');
+//       },
+//       onAdFailedToShowFullScreenContent: (ad,error)
+//       {
+//         ad.dispose();
+//         print('failed to load $error');
+//         openAd = null;
+//         loadAd();
+//       },
+//       onAdDismissedFullScreenContent: (ad)
+//       {
+//         ad.dispose();
+//         print('onAdWillDismissFullScreenContent');
+//         openAd = null;
+//         loadAd();
+//       }
+//   );
+//   openAd!.show();
+// }
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,7 +64,7 @@ Future<void> main() async {
   await Firebase.initializeApp();
   runApp(MyApp());
 
-  MobileAds.instance.initialize();
+  // MobileAds.instance.initialize();
 
   // await loadAd();
 
